@@ -28,7 +28,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.requestMatchers().antMatchers(AUTH_WHITELIST).and().authorizeRequests().anyRequest().authenticated().and()
 				.formLogin().permitAll();
-		http.cors().and().csrf().disable();
+		// http.cors().and().csrf().disable();
 	}
 
 	@Bean
